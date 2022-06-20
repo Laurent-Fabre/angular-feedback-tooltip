@@ -1,0 +1,71 @@
+.tooltip {
+  background-color: #F8D1C8;
+  display: flex;
+  position: absolute;
+  padding: 0.5em;
+  width: fit-content;
+  max-width: 320px;
+  z-index: 9999;
+  flex-direction: column;
+  border-radius: 2px;
+  white-space: pre-line;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+  }
+}
+
+.right::after {
+  top: 5px;
+  left: 0%;
+  margin-left: -16px;
+  border-width: 8px;
+  border-color: transparent #F8D1C8 transparent transparent;
+}
+
+.left::after {
+  top: 5px;
+  right: 0%;
+  margin-right: -16px;
+  border-width: 8px;
+  border-color: transparent transparent transparent #F8D1C8;
+}
+
+.top::after {
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border-width: 8px;
+  border-color: #F8D1C8 transparent transparent transparent;
+}
+
+.bottom::after {
+  top: -16px;
+  left: 50%;
+  margin-left: -8px;
+  border-width: 8px;
+  border-color: transparent transparent #F8D1C8 transparent;
+}
+
+.lst-error {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+
+  & svg-icon {
+    fill: red;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
+  }
+
+  & span {
+    color: red;
+  }
+
+  &:first-child {
+    margin-top: 0em;
+  }
+}

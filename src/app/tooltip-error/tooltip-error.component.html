@@ -1,0 +1,6 @@
+<div *ngIf="this.display && this.lstErrorToDisplay && this.lstErrorToDisplay.length > 0" #tooltip class="tooltip">
+  <div *ngFor="let error of this.lstErrorToDisplay" class="lst-error">
+    <svg-icon icon="icon-cross"></svg-icon>
+    <span>{{error}}</span>
+  </div>
+</div>
